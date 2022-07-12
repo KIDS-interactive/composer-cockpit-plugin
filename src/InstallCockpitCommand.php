@@ -5,15 +5,14 @@ namespace Kids\CockpitPlugin;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Process\Process;
 use Composer\Command\BaseCommand;
 
-class CreateCockpitCommand extends BaseCommand
+class InstallCockpitCommand extends BaseCommand
 {
     protected function configure(): void
     {
         $this
-            ->setName('create-cockpit')
+            ->setName('install-cockpit')
             ->addArgument('app-group', InputArgument::OPTIONAL, 'Key of app group', 'default')
             ->setDescription('Creates a group of Cockpit applications.');
     }
@@ -31,11 +30,11 @@ class CreateCockpitCommand extends BaseCommand
             $vendorDir = $composerConfig->get('vendor-dir');
             $pathinfo = pathinfo($composerConfig->getConfigSource()->getName());
             $homeDir = $pathinfo['dirname'];
-            $overrideDir = $homeDir . '/' . $config['override-folder'];
+            $overrideDir = $homeDir . '/' . $config['override-dir'];
 
-            foreach ($appGroup as $folder)
+            foreach ($appGroup as $dir)
             {
-                (new CockpitApp($homeDir . '/' . $folder, $overrideDir, $vendorDir))->create();
+                (new CockpitApp($homeDir . '/' . $dir, $overrideDir, $vendorDir))->create();
             }
         }
         else
