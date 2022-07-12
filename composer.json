@@ -1,0 +1,18 @@
+{
+    "name": "kids/cockpit-plugin",
+    "version": "0.1.0",
+    "type": "composer-plugin",
+    "require": {
+        "composer-plugin-api": "^2.0",
+        "aheinze/cockpit": "^0.12.2",
+        "symfony/filesystem": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kids\\CockpitPlugin\\": "src/"
+        }
+    },
+    "extra": {
+        "class": "Kids\\CockpitPlugin\\Plugin"
+    }
+}
