@@ -22,7 +22,7 @@ class Plugin implements PluginInterface, Capable
                 'app-groups' => [
                     'default' => ['public']
                 ],
-                'override-folder' => 'override-cockpit'
+                'override-dir' => 'override-cockpit'
             ]
         );
 
