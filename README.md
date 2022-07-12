@@ -31,8 +31,8 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
 ```
 - Installiere das Plugin: `composer require kids/cockpit-plugin` und bestätige dabei das Vertrauen in das Plugin mit `y`.
 - Es wird eine `cockpit` Konfiguration in der `composer.json` ergänzt:
--- `app-groups`: Die App-Gruppen sind benamte Listen von Ordner-Pfaden, in welche Cockpit installiert werden soll.
--- `override-dir`: In diesem Ordner liegen die Dateien versionskontrolliert, welche in alle Cockpit-Installationen kopiert werden (z.B. Collections).
+ - `app-groups`: Die App-Gruppen sind benamte Listen von Ordner-Pfaden, in welche Cockpit installiert werden soll.
+ - `override-dir`: In diesem Ordner liegen die Dateien versionskontrolliert, welche in alle Cockpit-Installationen kopiert werden (z.B. Collections).
 - Installiere Cockpit mit: `composer install-cockpit [app-group=default]` (der `app-group` Parameter ist optional)
 - Ergänze die Installationsordner in der `.gitignore` deines Projektes!
 
