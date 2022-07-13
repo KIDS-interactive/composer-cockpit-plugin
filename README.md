@@ -34,11 +34,12 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
   - `app-groups`: Die App-Gruppen sind benamte Listen von Ordner-Pfaden, in welche Cockpit installiert werden soll.
   - `override-dir`: In diesem Ordner liegen die Dateien versionskontrolliert, welche in alle Cockpit-Installationen kopiert werden (z.B. Collections).
 - Installiere Cockpit mit: `composer install-cockpit [app-group=default]` (der `app-group` Parameter ist optional)
-- Ergänze die Installationsordner in der `.gitignore` deines Projektes!
+- Ergänze `/vendor` und die Installationsordner in der `.gitignore` deines Projektes!
 
 ---
 
 ### Versionskontrolle ###
 
 - Wenn man Änderungen an Collections, Singeltons oder im `config`-Order macht, geschieht dies immer im Installationsordner.
-- Will man diese Änderungen einchecken, muss man sie in den definierten `override-dir` kopieren und commiten.
+- Diese Änderungen kann man mit dem Befehl `composer save-cockpit-config [app-dir]` in die `override-dir` sichern.
+  -- Gibt man den Parameter `app-dir` nicht an, wird der erste Order der ersten App-Gruppe verwendet.
