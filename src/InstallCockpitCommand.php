@@ -35,6 +35,7 @@ class InstallCockpitCommand extends BaseCommand
             foreach ($appGroup as $dir)
             {
                 (new CockpitApp($homeDir . '/' . $dir, $overrideDir, $vendorDir))->create();
+                $output->writeln('App in directory "' . $dir . '" installed.');
             }
         }
         else

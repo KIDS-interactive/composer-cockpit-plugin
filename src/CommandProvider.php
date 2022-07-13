@@ -8,6 +8,9 @@ class CommandProvider implements CommandProviderCapability
 {
     public function getCommands()
     {
-        return [new InstallCockpitCommand()];
+        return [
+            new InstallCockpitCommand(),
+            new SaveCockpitConfigCommand()
+        ];
     }
 }
