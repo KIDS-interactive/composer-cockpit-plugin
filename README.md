@@ -30,6 +30,7 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
 }
 ```
 - Installiere das Plugin: `composer require kids/cockpit-plugin` und bestätige dabei das Vertrauen in das Plugin mit `y`.
+  - für v1 mit PHP8.1-Kompaibilität: `composer require kids/cockpit-plugin:0.1.*`
 - Es wird eine `cockpit` Konfiguration in der `composer.json` ergänzt:
   - `app-groups`: Die App-Gruppen sind benamte Listen von Ordner-Pfaden, in welche Cockpit installiert werden soll.
   - `override-dir`: In diesem Ordner liegen die Dateien versionskontrolliert, welche in alle Cockpit-Installationen kopiert werden (z.B. Collections).
