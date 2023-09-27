@@ -1,10 +1,10 @@
 {
     "name": "kids/cockpit-plugin",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "type": "composer-plugin",
     "require": {
         "composer-plugin-api": "^2.0",
-        "aheinze/cockpit": "^0.12.2",
+        "cockpit-hq/cockpit": "^2.7.0",
         "symfony/filesystem": "^5.4"
     },
     "autoload": {

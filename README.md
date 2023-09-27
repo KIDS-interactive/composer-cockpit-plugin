@@ -7,7 +7,7 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
 ### Anforderungen ###
 
 - Composer >= 2
-- PHP >= 7.4
+- PHP >= 8.1
 
 ---
 
@@ -24,7 +24,7 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
     ],
     "config": {
         "platform":{
-            "ext-mongodb":"1.8"
+            "ext-mongodb":"1.11"
         }
     }
 }
@@ -42,4 +42,4 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
 
 - Wenn man Änderungen an Collections, Singeltons oder im `config`-Order macht, geschieht dies immer im Installationsordner.
 - Diese Änderungen kann man mit dem Befehl `composer save-cockpit-config [app-dir]` in die `override-dir` sichern.
-  -- Gibt man den Parameter `app-dir` nicht an, wird der erste Order der ersten App-Gruppe verwendet.
+  - Gibt man den Parameter `app-dir` nicht an, wird der erste Order der ersten App-Gruppe verwendet.

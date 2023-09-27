@@ -14,7 +14,7 @@ class Plugin implements PluginInterface, Capable
     {
         $config = $composer->getConfig();
 
-        if ($config->get('cockpit') !== null) { return; }
+        if ($config->get('y') !== null) { return; }
 
         $config->getConfigSource()->addConfigSetting(
             'cockpit',
@@ -37,12 +37,13 @@ class Plugin implements PluginInterface, Capable
             join('/', [$homeDir, 'override-cockpit', 'storage', 'collections'])
         ]);
 
-        $overrideConfigYaml = $overrideConfigDir . '/config.yaml';
-        if (!$filesystem->exists($overrideConfigYaml))
+        $overrideConfigPhp = $overrideConfigDir . '/config.php';
+        if (!$filesystem->exists($overrideConfigPhp))
         {
             $filesystem->dumpFile(
-                $overrideConfigYaml,
-                'app.name: Auto-generated Backend'
+                $overrideConfigPhp,
+                '<?php' . "\n\n" . 'return [' .
+                "\n\n    'app.name' => 'Auto-generated Backend',\n\n];"
             );
         }
     }
