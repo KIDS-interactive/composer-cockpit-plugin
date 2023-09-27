@@ -7,7 +7,7 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
 ### Anforderungen ###
 
 - Composer >= 2
-- PHP >= 7.4
+- PHP >= 8.1
 
 ---
 
@@ -24,7 +24,7 @@ Mit diesem Composer-Plugin ist es möglich, Cockpit CMS in seinem Composer-Proje
     ],
     "config": {
         "platform":{
-            "ext-mongodb":"1.8"
+            "ext-mongodb":"1.11"
         }
     }
 }

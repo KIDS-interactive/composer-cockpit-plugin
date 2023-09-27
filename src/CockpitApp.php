@@ -29,7 +29,7 @@ class CockpitApp
         }
 
         $filesystem->mirror(
-            $this->vendorDir . '/aheinze/cockpit',
+            $this->vendorDir . '/cockpit-hq/cockpit',
             $this->baseDir,
             null,
             ['override' => true]
