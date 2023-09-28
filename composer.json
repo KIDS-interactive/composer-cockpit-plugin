@@ -4,7 +4,7 @@
     "type": "composer-plugin",
     "require": {
         "composer-plugin-api": "^2.0",
-        "raffaelj/cockpit": "^1.0.0",
+        "raffaelj/cockpit": "dev-next",
         "symfony/filesystem": "^5.4"
     },
     "autoload": {
