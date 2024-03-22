@@ -45,9 +45,7 @@ class CockpitApp
     public function saveConfig()
     {
         $this->saveConfigDir('config');
-        $this->saveConfigDir('storage/collections');
-        $this->saveConfigDir('storage/singleton');
-        $this->saveConfigDir('storage/forms');
+        $this->saveConfigDir('storage/content');
     }
 
     private function saveConfigDir($dir)
