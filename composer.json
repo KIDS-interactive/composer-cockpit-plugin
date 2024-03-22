@@ -1,6 +1,6 @@
 {
     "name": "kids/cockpit-plugin",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "type": "composer-plugin",
     "require": {
         "composer-plugin-api": "^2.0",
